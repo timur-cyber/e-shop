@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Логин</title>
+    <style>
+        @font-face {
+            font-family: "Open Sans";
+            src: url({% static 'fonts/OpenSans-Bold.woff2' %}) format("woff2"),
+                url({% static 'fonts/OpenSans-Bold.woff' %}) format("woff2");
+            font-weight: 700;
+        }
+
+        @font-face {
+            font-family: "Open Sans";
+            src: url({% static 'fonts/OpenSans-Regular.woff2' %}) format("woff2"),
+                url({% static 'fonts/OpenSans-Regular.woff' %}) format("woff");
+            font-weight: 400;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            background: rgb(40,97,227);
+            background: linear-gradient(90deg, rgba(40,97,227,1) 0%, rgba(40,179,121,1) 50%);
+        }
+        .container {
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-left: 75px;
+            margin-right: 75px;
+            max-width: 1770px;
+            min-width: 320px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .form-block {
+            padding: 20px;
+            width: 350px;
+            height: 500px;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        form {
+            padding-left: 50px;
+            margin-bottom: 10px;
+        }
+
+        .form-heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-heading {
+            font-family: 'Open Sans';
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        input {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: block;
+            width: 235px;
+            height: 25px;
+            border: 2px solid rgb(40, 97, 227);
+            border-radius: 5px;
+        }
+
+        input:focus {
+            outline: none !important;
+            border-color: #28B379;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-family: 'Open Sans';
+            font-size: 18px;
+            font-weight: 400;
+            outline: none;
+            border: 1px #fff solid;
+            background-color: rgb(40, 97, 227);
+            color: #fff;
+            cursor: pointer;
+            transition: background-color .3s ease-in-out;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #28B379;
+        }
+
+        .form-label {
+            font-family: 'Open Sans';
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .error-text {
+            font-family: 'Open Sans';
+            font-size: 16px;
+            font-weight: 400;
+            color: red;
+        }
+
+        .link {
+            margin-left: 50px;
+            font-family: 'Open Sans';
+            font-size: 20px;
+            font-weight: 400;
+            color: rgb(40, 97, 227);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-block">
+            <div class="heading-block">
+                <h2 class="form-heading" align="center">Страница входа</h2>
+            </div>
+            <form method="post">
+                {% csrf_token %}
+                {% if form.non_field_errors %}
+                    <p class="error-text">Неправильный логин или пароль</p>
+                {% endif %}
+                {% for field in form %}
+                    {% if forloop.counter == 1 %}
+                        <label class="form-label">Имя пользователя:</label>
+                        <input type="text" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
+                    {% else %}
+                        <label class="form-label">Пароль:</label>
+                        <input type="password" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
+                    {% endif %}
+                {% endfor %}
+                <button type="submit">Войти</button>
+            </form>
+            <a class="link" href="{% url 'registration' %}">Регистрация</a>
+        </div>
+    </div>
+</body>
+</html>

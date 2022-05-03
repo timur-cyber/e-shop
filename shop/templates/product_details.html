@@ -1,0 +1,38 @@
+{% extends "main.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+</head>
+<body>
+    {% block content %}
+        <section class="section-products-detailed">
+            <div class="section-products-detailed__container container">
+                <div class="section-products-detailed__block">
+                    <div class="section-products-detailed__img-container">
+                        <img src="/media/{{ product.image }}" alt="" class="section-products-detailed__img">
+                    </div>
+                    <div class="section-products-detailed__info">
+                        <h1 class="section-products-detailed__heading">
+                            Название: <span class="section-products-detailed__name">{{ product.title }}</span>
+                        </h1>
+                        <h2 class="section-products-detailed__heading section-products-detailed__heading_2">
+                            Описание:
+                        </h2>
+                        <p class="section-products-detailed__text">
+                            {{ product.description }}
+                        </p>
+                        <h2 class="section-products-detailed__heading section-products-detailed__heading_2 button-bottom">
+                            Цена: <span class="section-products-detailed__price">{{ product.price }}$</span>
+                        </h2>
+                        <a class="section-products-detailed__btn" href="/add-to-cart/{{ product.id }}">Добавить в корзину</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,54 @@
+{% extends "main.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+</head>
+<body>
+    {% block content %}
+        <section class="section-products">
+            <div class="container section-products__container">
+                <h2 class="section-products__heading" align="center">
+                    {{ category }}
+                </h2>
+                {% if exist %}
+                    {% if products_list %}
+                <ul class="section-products__list">
+                    {% for product in products_list %}
+                    <li class="section-products__item">
+                        <div class="section-products__item-img-container">
+                            <img class="section-products__item-img" src="/media/{{ product.image }}" alt="">
+                        </div>
+                        <div class="section-products__item-info">
+                            <div class="section-products__item-title">
+                                <h3 class="section-products__item-name">
+                                    {{ product.title }}
+                                </h3>
+                                <span class="section-products__item-price">
+                                    {{ product.price }}$
+                                </span>
+                            </div>
+                            <div class="section-products__item-btn">
+                                <a href="/product-details/{{ product.id }}" class="section-products__item-link">Подробнее</a>
+                            </div>
+                        </div>
+                        <p class="section-products__item-text">
+                            {{ product.description }}
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                    {% else %}
+                        <h2 class="section-categories__heading-none">Нет товаров в данной категории</h2>
+                    {% endif %}
+                {% else %}
+                    <h2 class="section-categories__heading-none">Данной категории не существует</h2>
+                {% endif %}
+            </div>
+        </section>
+    {% endblock %}
+</body>
+</html>

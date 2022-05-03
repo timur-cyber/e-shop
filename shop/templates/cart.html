@@ -1,0 +1,65 @@
+{% extends "main.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+</head>
+<body>
+    {% block content %}
+        <section class="section-cart">
+            <div class="section-cart__container container">
+                <h1 class="section-cart__heading">
+                    Корзина
+                </h1>
+                {% if cart %}
+                <ul class="section-cart__list">
+                {% for id, item in cart.items %}
+                    <li class="section-cart__item">
+                        <div class="section-cart__item-img-container">
+                            <img src="/media/{{ item|get_item:'img' }}" alt="" class="section-cart__item-img">
+                        </div>
+                        <div class="section-cart__item-title-container">
+                            <h2 class="section-cart__item-title">
+                                {{ item|get_item:'title' }}
+                            </h2>
+                        </div>
+                        <div class="section-cart__item-quantity-container">
+                            <span class="section-cart__item-quantity">
+                                Кол-во: <span class="blue">{{ item|get_item:'amount' }}</span>
+                            </span>
+                        </div>
+                        <div class="section-cart__item-price-container">
+                            <span class="section-cart__item-price">
+                                {{ item|get_item:'price' }}$
+                            </span>
+                        </div>
+                        <div class="section-cart__item-quantity-container">
+                            <a href="/add-to-cart/{{ id }}" class="section-cart__item-add-button">
+                                Добавить
+                            </a>
+                        </div>
+                        <div class="section-cart__item-quantity-container">
+                            <a href="/delete-from-cart/{{ id }}" class="section-cart__item-delete-button">
+                                Удалить
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+                </ul>
+                <div class="section-cart__order-details-container">
+                    <div class="section-cart__order-button-container">
+                        <span class="section-cart__order-total-price"><span class="total">Итого:</span> {{ total_price }}$</span>
+                        <a href="{% url 'make_order' %}" class="section-cart__order-button">Заказать</a>
+                    </div>
+                </div>
+                {% else %}
+                    <h2 class="section-categories__heading-none">Нет добавленных товаров</h2>
+                {% endif %}
+            </div>
+        </section>
+    {% endblock %}
+</body>
+</html>

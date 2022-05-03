@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин</title>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+</head>
+<body>
+    {% block content %}
+    <main class="main">
+        <section class="section-hero">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                {% for item in swiper_list %}
+                <div class="swiper-slide">
+                    <div class="container swiper-container">
+                        <div class="swiper-left">
+                            <h1 class="swiper-heading">
+                                {{ item.title }}
+                            </h1>
+                            <span class="swiper-text">
+                                {{ item.price }}$
+                            </span>
+                            <a href="/product-details/{{ item.id }}" class="swiper-link">Подробнее</a>
+                        </div>
+                        <div class="swiper-right">
+                            <img class="swiper-img" src=/media/{{ item.image }} alt="item">
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <section class="section-products">
+            <div class="container section-products__container">
+                <h2 class="section-products__heading" align="center">
+                    Товары
+                </h2>
+                <ul class="section-products__list">
+                    {% for item in main_list %}
+                    <li class="section-products__item">
+                        <div class="section-products__item-img-container">
+                            <img class="section-products__item-img" src=/media/{{ item.image }} alt="">
+                        </div>
+                        <div class="section-products__item-info">
+                            <div class="section-products__item-title">
+                                <h3 class="section-products__item-name">
+                                    {{ item.title }}
+                                </h3>
+                                <span class="section-products__item-price">
+                                    {{ item.price }}$
+                                </span>
+                            </div>
+                            <div class="section-products__item-btn">
+                                <a href="/product-details/{{ item.id }}" class="section-products__item-link">Подробнее</a>
+                            </div>
+                        </div>
+                        <p class="section-products__item-text">
+                            {{ item.description }}
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+    </main>
+   {% endblock %}
+
+
+
+
+</body>
+</html>

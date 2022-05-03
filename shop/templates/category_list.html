@@ -1,0 +1,41 @@
+{% extends "main.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+</head>
+<body>
+    {% block content %}
+        <section class="section-categories">
+            <div class="container section-categories__container">
+                <h2 class="section-categories__heading" align="center">
+                    Категории
+                </h2>
+                {% if category_list %}
+                <ul class="section-categories__list">
+                    {% for category in category_list %}
+                    <a href="/{{ category.category_index }}/" class="section-categories__item">
+                        <div class="section-categories__img-container">
+                            <img src="/media/{{ category.image }}" alt="" class="section-categories__item-img">
+                        </div>
+                        <div class="section-categories__text-container">
+                            <h2 class="section-categories__item-heading">
+                                {{ category.category_name }}
+                            </h2>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <h3 class="section-categories__heading-none">
+                    Нет добавленных категорий
+                </h3>
+                {% endif %}
+            </div>
+        </section>
+    {% endblock %}
+</body>
+</html>
