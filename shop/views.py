@@ -18,13 +18,9 @@ def get_profile(request):
     return profile
 
 
-def check_if_registered(request):
+def empty_cart(request):
     if not request.user.is_authenticated:
         return HttpResponse('Необходима регистрация', status=403)
-
-
-def empty_cart(request):
-    check_if_registered(request)
     user = Profile.objects.get(user=request.user)
     user.cart = {}
     user.save()
@@ -124,7 +120,8 @@ class ProductDetailView(View):
 
 class CartView(View):
     def get(self, request):
-        check_if_registered(request)
+        if not request.user.is_authenticated:
+            return HttpResponse('Необходима регистрация', status=403)
         user = Profile.objects.get(user=request.user)
         cart = user.cart
         total_price = sum([item['price'] for item in user.cart.values()])
@@ -135,7 +132,8 @@ class CartView(View):
 class AddToCartView(View):
     def get(self, request, id):
         try:
-            check_if_registered(request)
+            if not request.user.is_authenticated:
+                return HttpResponse('Необходима регистрация', status=403)
             user = Profile.objects.get(user=request.user)
             item = Item.objects.get(pk=id)
             cart = user.cart
@@ -153,7 +151,8 @@ class AddToCartView(View):
 
 class DeleteFromCartView(View):
     def get(self, request, id):
-        check_if_registered(request)
+        if not request.user.is_authenticated:
+            return HttpResponse('Необходима регистрация', status=403)
         user = Profile.objects.get(user=request.user)
         try:
             user.cart.pop(str(id))
@@ -165,7 +164,8 @@ class DeleteFromCartView(View):
 
 class MakeOrderView(View):
     def get(self, request):
-        check_if_registered(request)
+        if not request.user.is_authenticated:
+            return HttpResponse('Необходима регистрация', status=403)
         user = Profile.objects.get(user=request.user)
         total = sum([item['price'] for item in user.cart.values()])
         if not user.cart:
