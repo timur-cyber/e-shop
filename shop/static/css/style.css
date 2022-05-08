@@ -192,6 +192,19 @@ body {
     fill: var(--second-color);
 }
 
+.cart-block {
+    position: relative;
+}
+
+.cart-popup {
+    position: absolute;
+    left: 30px;
+    bottom: 5px;
+    background-color: #FF7B19;
+    padding: 3px 7px;
+    border-radius: 200px;
+}
+
 /* MAIN */
 
 /* HERO */

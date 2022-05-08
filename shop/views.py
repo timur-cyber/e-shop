@@ -27,6 +27,23 @@ def empty_cart(request):
     return redirect('/')
 
 
+def get_total_amount(request):
+    user = get_profile(request)
+    if not user:
+        return None
+    if user.cart:
+        amount = sum([item['amount'] for item in user.cart.values()])
+    else:
+        amount = None
+    return amount
+
+
+def custom_render(request, template, context):
+    context['profile'] = get_profile(request)
+    context['amount'] = get_total_amount(request)
+    return render(request, template, context)
+
+
 @register.filter
 def get_item(dictionary, key):
     return dictionary.get(key)
@@ -40,8 +57,8 @@ class MainView(View):
         random.shuffle(item_list)
         num = 8 if len(item_list) >= 8 else len(item_list)
         main_list = [item for item in item_list[:num]]
-        return render(request, 'main.html',
-                      context={'swiper_list': swiper_list, 'main_list': main_list, 'profile': get_profile(request)})
+        return custom_render(request, 'main.html',
+                             context={'swiper_list': swiper_list, 'main_list': main_list})
 
 
 class LoginSysView(LoginView):
@@ -88,11 +105,11 @@ class CategoriesView(View):
     def get(self, request):
         try:
             categories = Category.objects.all()
-            return render(request, 'category_list.html',
-                          context={'category_list': categories, 'profile': get_profile(request)})
+            return custom_render(request, 'category_list.html',
+                                 context={'category_list': categories})
         except Category.DoesNotExist:
-            return render(request, 'category_list.html',
-                          context={'category_list': None, 'profile': get_profile(request)})
+            return custom_render(request, 'category_list.html',
+                                 context={'category_list': None})
 
 
 class ProductsView(View):
@@ -100,20 +117,19 @@ class ProductsView(View):
         try:
             category = Category.objects.get(category_index=index)
             products = Item.objects.filter(category=category).all()
-            return render(request, 'products.html', context={'exist': True,
-                                                             'products_list': products,
-                                                             'category': category.category_name,
-                                                             'profile': get_profile(request)})
+            return custom_render(request, 'products.html', context={'exist': True,
+                                                                    'products_list': products,
+                                                                    'category': category.category_name, })
         except Category.DoesNotExist:
-            return render(request, 'products.html', context={'exist': False})
+            return custom_render(request, 'products.html', context={'exist': False})
 
 
 class ProductDetailView(View):
     def get(self, request, id):
         try:
             product = Item.objects.get(pk=id)
-            return render(request, 'product_details.html',
-                          context={'product': product, 'profile': get_profile(request)})
+            return custom_render(request, 'product_details.html',
+                                 context={'product': product})
         except Item.DoesNotExist:
             return redirect('/categories/')
 
@@ -125,8 +141,8 @@ class CartView(View):
         user = Profile.objects.get(user=request.user)
         cart = user.cart
         total_price = sum([item['price'] for item in user.cart.values()])
-        return render(request, 'cart.html',
-                      context={'cart': cart, 'total_price': total_price, 'profile': get_profile(request)})
+        return custom_render(request, 'cart.html',
+                             context={'cart': cart, 'total_price': total_price})
 
 
 class AddToCartView(View):
