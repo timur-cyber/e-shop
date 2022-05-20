@@ -49,6 +49,14 @@ def get_item(dictionary, key):
     return dictionary.get(key)
 
 
+@register.filter
+def is_enough(total_sum, balance):
+    if balance - total_sum <= 0:
+        return False
+    else:
+        return True
+
+
 class MainView(View):
     def get(self, request):
         item_list = list(Item.objects.all())
@@ -196,3 +204,11 @@ class MakeOrderView(View):
         user.balance -= total
         user.save()
         return redirect(request.META.get('HTTP_REFERER'))
+
+
+class OrdersView(View):
+    def get(self, request):
+        if not request.user.is_staff:
+            return HttpResponse('Нужны права администратора', status=403)
+        orders = Order.objects.all()
+        return custom_render(request, 'orders.html', context={'order_list': orders})
