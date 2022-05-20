@@ -28,7 +28,25 @@
                         <h2 class="section-products-detailed__heading section-products-detailed__heading_2 button-bottom">
                             Цена: <span class="section-products-detailed__price">{{ product.price }}$</span>
                         </h2>
+                        {% if profile %}
                         <a class="section-products-detailed__btn" href="/add-to-cart/{{ product.id }}">Добавить в корзину</a>
+                        {% else %}
+                        <!-- Кнопка -->
+                        <div class="css-modal-checkbox-container">
+                            <label for="css-modal-checkbox" class="css-modal-checkbox">Добавить в корзину</label>
+                        </div>
+
+                        <!-- Модальное окно -->
+                        <input type="checkbox" id="css-modal-checkbox" />
+                        <div class="cmc">
+                            <div class="cmt">
+                                <p class="modal-text">Для добавления товаров в корзину необходима регистрация.</p>
+                                <div class="modal-btn">
+                                    <label for="css-modal-checkbox" class="css-modal-close">Закрыть</label>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

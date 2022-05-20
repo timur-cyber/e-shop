@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>Корзина</title>
     <link rel="stylesheet" href={% static "css/style.css" %}>
+    <link rel="stylesheet" href="{% static "css/modal.css" %}">
 </head>
 <body>
     {% block content %}
@@ -52,7 +53,21 @@
                 <div class="section-cart__order-details-container">
                     <div class="section-cart__order-button-container">
                         <span class="section-cart__order-total-price"><span class="total">Итого:</span> {{ total_price }}$</span>
-                        <a href="{% url 'make_order' %}" class="section-cart__order-button">Заказать</a>
+                        {% if total_price|is_enough:profile.balance %}
+                            <a href="{% url 'make_order' %}" class="section-cart__order-button">Заказать</a>
+                        {% else %}
+                            <label for="css-modal-checkbox" class="css-modal-checkbox cart-modal-btn">Заказать</label>
+
+                            <input type="checkbox" id="css-modal-checkbox" />
+                            <div class="cmc">
+                                <div class="cmt">
+                                    <p class="modal-text">У вас недостаточно средств для оформления заказа</p>
+                                    <div class="modal-btn">
+                                        <label for="css-modal-checkbox" class="css-modal-close">Закрыть</label>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
                 {% else %}
