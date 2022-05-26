@@ -168,7 +168,7 @@ class AddToCartView(View):
             else:
                 cart[item.id] = {'title': item.title, 'amount': 1, 'price': item.price, 'img': item.image.name}
             user.save()
-            return redirect(request.META.get('HTTP_REFERER'))
+            return redirect(request.META.get('HTTP_REFERER') or '/')
         except Item.DoesNotExist:
             return HttpResponse('Id товара недействителен', status=401)
 
@@ -183,7 +183,7 @@ class DeleteFromCartView(View):
         except KeyError:
             return HttpResponse('Id товара недействителен', status=401)
         user.save()
-        return redirect(request.META.get('HTTP_REFERER'))
+        return redirect(request.META.get('HTTP_REFERER') or '/')
 
 
 class MakeOrderView(View):
@@ -203,7 +203,7 @@ class MakeOrderView(View):
         user.cart = {}
         user.balance -= total
         user.save()
-        return redirect(request.META.get('HTTP_REFERER'))
+        return redirect(request.META.get('HTTP_REFERER') or '/')
 
 
 class OrdersView(View):
