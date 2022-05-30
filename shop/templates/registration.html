@@ -132,39 +132,13 @@
             <form method="post">
                 {% csrf_token %}
                 {% for field in form %}
-                    {% if forloop.counter == 1 %}
-                        <label class="form-label">Имя пользователя:</label>
-                        <input required type="text" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
-                        {{ field.errors }}
-                    {% elif forloop.counter == 2 %}
-                        <label class="form-label">Имя:</label>
-                        <input required type="text" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
-                        {{ field.errors }}
-                    {% elif forloop.counter == 3 %}
-                        <label class="form-label">Фамилия:</label>
-                        <input required type="text" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
-                        {{ field.errors }}
-                    {% elif forloop.counter == 4 %}
-                        <label class="form-label">Эл.Почта:</label>
-                        <input required type="text" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
-                        {{ field.errors }}
-                    {% elif forloop.counter == 5 %}
-                        <label class="form-label">Номер телефона:</label>
-                        <input required type="text" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
-                        {{ field.errors }}
-                    {% elif forloop.counter == 6 %}
-                        <label class="form-label">Город:</label>
-                        <input required type="text" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
-                        {{ field.errors }}
-                    {% elif forloop.counter == 7 %}
-                        <label class="form-label">Пароль:</label>
-                        <input required type="password" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
-                        {{ field.errors }}
-                    {% elif forloop.counter == 8 %}
-                        <label class="form-label">Потверждение пароля:</label>
-                        <input required type="password" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
-                        {{ field.errors }}
+                    <label class="form-label">{{ field.label }}:</label>
+                    {% if field.value and field.widget_type != 'password'  %}
+                        <input value="{{ field.value }}" required type="{{ field.widget_type }}" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
+                    {% else %}
+                        <input value="" required type="{{ field.widget_type }}" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
                     {% endif %}
+                    {{ field.errors }}
                 {% endfor %}
                 <button type="submit">Зарегистрироваться</button>
             </form>

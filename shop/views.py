@@ -1,13 +1,13 @@
 import random
 
 from django.contrib.auth import logout, authenticate, login
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
 from django.template.defaulttags import register
 from .models import Category, Item, Profile, Order
-from .forms import RegisterForm
+from .forms import RegisterForm, LoginAuthForm
 
 
 def get_profile(request):
@@ -69,9 +69,33 @@ class MainView(View):
                              context={'swiper_list': swiper_list, 'main_list': main_list})
 
 
-class LoginSysView(LoginView):
-    template_name = 'login.html'
+class LoginSysView(View):
+    def get(self, request):
+        form = LoginAuthForm()
+        return render(request, 'login.html', context={'form': form})
 
+    def post(self, request):
+        form = LoginAuthForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            raw_pass = form.cleaned_data.get('password')
+            if not User.objects.filter(username=username):
+                form.add_error('username', 'Неправильный логин или пароль')
+                return render(request, 'login.html', {'form': form, })
+            try:
+                user = authenticate(username=username, password=raw_pass)
+                if not user:
+                    form.add_error('password', 'Неправильный логин или пароль')
+                    return render(request, 'login.html', {'form': form, })
+                login(request, user)
+                return redirect('/')
+            except AttributeError:
+                form.add_error('username', 'Неправильный логин или пароль')
+                return render(request, 'login.html', {'form': form, })
+        else:
+            form.add_error('username', 'Неправильный логин или пароль')
+            form.add_error('password', 'Неправильный логин или пароль')
+            return render(request, 'login.html', {'form': form, })
 
 def logout_view(request):
     logout(request)
@@ -106,7 +130,7 @@ class RegisterView(View):
             user = authenticate(username=username, password=raw_pass)
             login(request, user)
             return redirect('/')
-        return render(request, 'registration.html', {'form': form})
+        return render(request, 'registration.html', {'form': form, })
 
 
 class CategoriesView(View):

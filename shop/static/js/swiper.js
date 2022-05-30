@@ -2,7 +2,7 @@ const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  autoplay: false,
+  autoplay: true,
 
   // If we need pagination
   pagination: {

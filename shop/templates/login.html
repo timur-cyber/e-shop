@@ -130,16 +130,15 @@
             </div>
             <form method="post">
                 {% csrf_token %}
-                {% if form.non_field_errors %}
+                {% if form.errors %}
                     <p class="error-text">Неправильный логин или пароль</p>
                 {% endif %}
                 {% for field in form %}
-                    {% if forloop.counter == 1 %}
-                        <label class="form-label">Имя пользователя:</label>
-                        <input type="text" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
+                    <label class="form-label">{{ field.label }}:</label>
+                    {% if field.html_name == 'password' %}
+                    <input required type="password" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
                     {% else %}
-                        <label class="form-label">Пароль:</label>
-                        <input type="password" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
+                    <input required type="text" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}">
                     {% endif %}
                 {% endfor %}
                 <button type="submit">Войти</button>
