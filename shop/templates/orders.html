@@ -1,0 +1,63 @@
+{% extends "main.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказа</title>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+</head>
+<body>
+    {% block content %}
+        <section class="section-orders">
+            <div class="section-orders__container container">
+                <h1 class="section-orders__heading">
+                    Список заказов
+                </h1>
+                {% if order_list %}
+                <ul class="section-orders__list">
+                <li class="section-orders__item">
+                    <div class="section-orders__item-id-container">
+                        <span class="section-orders__item-id section-orders__headings">
+                            Номер заказа
+                        </span>
+                    </div>
+                    <div class="section-orders__item-user-container">
+                        <h2 class="section-cart__user-title section-orders__headings">
+                            Имя
+                        </h2>
+                    </div>
+                    <div class="section-orders__item-date-container">
+                        <h2 class="section-orders__item-date section-orders__headings">
+                            Дата заказа
+                        </h2>
+                    </div>
+                </li>
+                {% for item in order_list %}
+                    <a href="#" class="section-orders__item">
+                        <div class="section-orders__item-id-container">
+                            <span class="section-orders__item-id">
+                                #{{ item.id }}
+                            </span>
+                        </div>
+                        <div class="section-orders__item-user-container">
+                            <h2 class="section-cart__user-title">
+                                {{ item.user.username }}
+                            </h2>
+                        </div>
+                        <div class="section-orders__item-date-container">
+                            <h2 class="section-orders__item-date">
+                                {{ item.date }}
+                            </h2>
+                        </div>
+                    </a>
+                {% endfor %}
+                </ul>
+                {% else %}
+                    <h2 class="section-categories__heading-none">Нет заказов</h2>
+                {% endif %}
+            </div>
+        </section>
+    {% endblock %}
+</body>
+</html>

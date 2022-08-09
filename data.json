@@ -1,0 +1,1131 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$VuxAoyWlYrXCnSCnvsVnoJ$WHn3kGryVYAZQlXdG1vs9Gl4yMMQ42mLHT9uVuap2ZY=",
+        "last_login": "2022-07-28T12:41:06.724",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-04-23T17:18:54.368",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$haO1G8jbdl3vWf17a7lJJi$IZ70ZTRxoDHiJPywiF2VPZAZ2237RTG4AfHhXwwZ1/I=",
+        "last_login": "2022-05-01T19:17:31.623",
+        "is_superuser": false,
+        "username": "test",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-04-23T17:21:10",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$MJsOyVxAJ6U7lGFLzCe7eN$gH+5+0nby8qROqzUkbw4d9lbAJv0OZdq7hZJlxkrrsA=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "",
+        "first_name": "vdsvsdvsa",
+        "last_name": "dsvds",
+        "email": "ewfcdcds@fefccas.cdw",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-01T19:17:31.528",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$QnZDUvC7CmRDShR1Zc8MMp$3zOOPCGGk0gqOPU3Tik4DrMarZB/ZOL3q/9LNS39K7Y=",
+        "last_login": "2022-05-01T19:20:03.301",
+        "is_superuser": false,
+        "username": "grereeg",
+        "first_name": "reggerwgrewg",
+        "last_name": "ergreg",
+        "email": "regregrs@rggerg.rwg",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-01T19:20:03.156",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$1WLqgMFI8sb6FymgKxgIkA$xVNOMBv2RlLRUabNbPc+vfElIUMe6ATTcs66izasBHI=",
+        "last_login": "2022-05-01T19:30:54.064",
+        "is_superuser": false,
+        "username": "hfdvbfdvbf",
+        "first_name": "fegbefbs",
+        "last_name": "berbterbert",
+        "email": "regregv@gfewfefec.dvcds",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-01T19:30:53.916",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$k6TNetAwuEiXVIR1BcV7gy$9h3rmx/PA361WgLIu+vYuzZ61TZ/IwgiM59qGafL5sw=",
+        "last_login": "2022-05-30T18:20:36.395",
+        "is_superuser": false,
+        "username": "test2",
+        "first_name": "vdsvsdvsa",
+        "last_name": "dbdbbdbfdb",
+        "email": "bhxdkoh610@inmail92.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-06T22:19:50.943",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$wK6unCHM7OoElIuF6I27d5$eZflcqyRiax+aCs2WQK/XoA5p5Usf01ROXzb9t5uLMo=",
+        "last_login": "2022-05-06T22:20:08.166",
+        "is_superuser": false,
+        "username": "hegerrvbreb",
+        "first_name": "vdsvsdvsa",
+        "last_name": "dbdbbdbfdb",
+        "email": "bhxdkoh610@inmail92.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-06T22:20:08.025",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$mCW3oNBbvPcDuweZUg0OdZ$AVyeuSN8cWZEVW9sz9ATOUCi/BP9IlwPtGTHzTSnmws=",
+        "last_login": "2022-05-30T13:26:28.598",
+        "is_superuser": false,
+        "username": "vbebervwer",
+        "first_name": "vervefver",
+        "last_name": "verveve",
+        "email": "ervevevev@freg.rgf",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-30T13:26:28.454",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$JtJVjM4teOei9aDY8SLWPs$ohpeGIX2YB+NxOY7yjA4SBuGdhN3sPm178kFyJOat68=",
+        "last_login": "2022-05-30T16:26:56.803",
+        "is_superuser": false,
+        "username": "ggrrerg",
+        "first_name": "regerwger",
+        "last_name": "regwerger",
+        "email": "cdgergvdsfv@wfwef.ref",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-30T16:26:56.654",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "9qp8r9m8962xqx1odakouawfc157wo1a",
+    "fields": {
+        "session_data": "e30:1nvfEs:Rbm4kRk8XZYzLCK_x4nuSQd5TuE6pxiwVzo5XcYbR10",
+        "expire_date": "2022-06-13T18:15:18.670"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "hgh82z1bk0b6x35ft7fe17qb0nnsed19",
+    "fields": {
+        "session_data": "e30:1nvaOT:cGGNJfdH3Pn_gOfffT4vMNmmPUAt-lCoKFHjLfAndTA",
+        "expire_date": "2022-06-13T13:04:53.053"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "jndsyiyc8w5cgra1ua9iyzce3y91bshe",
+    "fields": {
+        "session_data": "e30:1nvfDq:ycwuCY4tSFdWrjGHsCqxNry-k38dK_1YnuHLtaaOgE4",
+        "expire_date": "2022-06-13T18:14:14.584"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ldeqkhssf5m4mqy0m5mzv0r6ogjta9hd",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSEMLY-6dO83kIEZpGogKe3K-O_apAvd3nPOfYmA21rC1nkJM4mzAHH63SKmB9cd0B3rrcnU6rrMUe6KPGiX10b8vBzu30HBXr61Rk1uRDI6AjvgzNoqUOR4ArRqHCZjFXOGzNEPCjRFNi5lmwGV9yTeH-Y5OCA:1oGy8o:lSPA4PXnyrUulJsVPIQvBt0MR8riS0HyjhnUvuW5J-c",
+        "expire_date": "2022-08-11T12:41:06.725"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "m8wsnkcdzqhwvd6pv2zcac87itktamw1",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSEMLY-6dO83kIEZpGogKe3K-O_apAvd3nPOfYmA21rC1nkJM4mzAHH63SKmB9cd0B3rrcnU6rrMUe6KPGiX10b8vBzu30HBXr61Rk1uRDI6AjvgzNoqUOR4ArRqHCZjFXOGzNEPCjRFNi5lmwGV9yTeH-Y5OCA:1nvfNP:_-qUcN_cZ5K7R1QeCsOPKfQEpfkXGuIzo6zyUTjnxHo",
+        "expire_date": "2022-06-13T18:24:07.578"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "qwjjauaux7jjowdcn3mndxink0p66gn9",
+    "fields": {
+        "session_data": "e30:1nvfBs:f08EakzPpAloI1VOWZO_oMkRp49uj5WlykfhAUb8gaE",
+        "expire_date": "2022-06-13T18:12:12.803"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "s3jwou0g5x81n0ub6fpsb25tb7r7ihvl",
+    "fields": {
+        "session_data": "e30:1nvaRP:9WmTnlvlvuJxIYCWbSVXUiWRgGF9Ee1hwvl0KRNOqcs",
+        "expire_date": "2022-06-13T13:07:55.094"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "wurmtxqif1ukxchxdvpgjbmsxrins429",
+    "fields": {
+        "session_data": "e30:1nvaRd:k9YiW2_xaSHTkT2J_i7bewTJIS61re3Jg2VVudBS0vo",
+        "expire_date": "2022-06-13T13:08:09.138"
+    }
+},
+{
+    "model": "shop.profile",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "first_name": "Тест",
+        "last_name": "Тестов",
+        "email": "bhxdkoh610@inmail92.com",
+        "phone_number": "+965356345",
+        "city": "Moscow",
+        "cart": "{}",
+        "balance": 100
+    }
+},
+{
+    "model": "shop.profile",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "first_name": "Админ",
+        "last_name": "Админов",
+        "email": "bhxdkoh610@inmail92.com",
+        "phone_number": "+965356345",
+        "city": "NYC",
+        "cart": "{}",
+        "balance": 252
+    }
+},
+{
+    "model": "shop.profile",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "grereeg"
+        ],
+        "first_name": "reggerwgrewg",
+        "last_name": "ergreg",
+        "email": "regregrs@rggerg.rwg",
+        "phone_number": "+965356345",
+        "city": "Rome",
+        "cart": "{}",
+        "balance": 100
+    }
+},
+{
+    "model": "shop.profile",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "hfdvbfdvbf"
+        ],
+        "first_name": "fegbefbs",
+        "last_name": "berbterbert",
+        "email": "regregv@gfewfefec.dvcds",
+        "phone_number": "+435345435",
+        "city": "NYC",
+        "cart": "{}",
+        "balance": 100
+    }
+},
+{
+    "model": "shop.profile",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "test2"
+        ],
+        "first_name": "vdsvsdvsa",
+        "last_name": "dbdbbdbfdb",
+        "email": "bhxdkoh610@inmail92.com",
+        "phone_number": "+435345435",
+        "city": "NYC",
+        "cart": "{}",
+        "balance": 10000
+    }
+},
+{
+    "model": "shop.profile",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "hegerrvbreb"
+        ],
+        "first_name": "vdsvsdvsa",
+        "last_name": "dbdbbdbfdb",
+        "email": "bhxdkoh610@inmail92.com",
+        "phone_number": "+435345435",
+        "city": "NYC",
+        "cart": "{}",
+        "balance": 10000
+    }
+},
+{
+    "model": "shop.profile",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "vbebervwer"
+        ],
+        "first_name": "vervefver",
+        "last_name": "verveve",
+        "email": "ervevevev@freg.rgf",
+        "phone_number": "+965356345",
+        "city": "vdsvsdv",
+        "cart": "{}",
+        "balance": 10000
+    }
+},
+{
+    "model": "shop.profile",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "ggrrerg"
+        ],
+        "first_name": "regerwger",
+        "last_name": "regwerger",
+        "email": "cdgergvdsfv@wfwef.ref",
+        "phone_number": "ewgerg",
+        "city": "rgegregewge",
+        "cart": "{}",
+        "balance": 10000
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 1,
+    "fields": {
+        "category_name": "Ноутбуки",
+        "category_index": "notebooks",
+        "image": "mbp16_ilTIX2D.png"
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 2,
+    "fields": {
+        "category_name": "Телефоны",
+        "category_index": "phones",
+        "image": "iphone13promax.png"
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 3,
+    "fields": {
+        "category_name": "Наушники",
+        "category_index": "headphones",
+        "image": "headphones.png"
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 4,
+    "fields": {
+        "category_name": "Аксессуары",
+        "category_index": "accessories",
+        "image": "pngegg.png"
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 5,
+    "fields": {
+        "category_name": "Мониторы",
+        "category_index": "displays",
+        "image": "PngItem_6472251.png"
+    }
+},
+{
+    "model": "shop.item",
+    "pk": 2,
+    "fields": {
+        "title": "iPhone 13",
+        "description": "Description of iPhone 13",
+        "category": 2,
+        "price": 799,
+        "image": "iphone13_deruPyQ.png"
+    }
+},
+{
+    "model": "shop.item",
+    "pk": 3,
+    "fields": {
+        "title": "MacBook Pro 16' (2021)",
+        "description": "New description for new apple macbook",
+        "category": 1,
+        "price": 2199,
+        "image": "macbook.png"
+    }
+},
+{
+    "model": "shop.item",
+    "pk": 4,
+    "fields": {
+        "title": "AirPods Pro",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type a",
+        "category": 3,
+        "price": 399,
+        "image": "airpods.png"
+    }
+},
+{
+    "model": "shop.item",
+    "pk": 5,
+    "fields": {
+        "title": "AirPods (3 Gen)",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type a",
+        "category": 3,
+        "price": 279,
+        "image": "airpods-3rdgen-2.png"
+    }
+},
+{
+    "model": "shop.item",
+    "pk": 6,
+    "fields": {
+        "title": "MacBook Pro 16\" (2019)",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type a",
+        "category": 1,
+        "price": 1999,
+        "image": "mbp16_zO7aEaJ.png"
+    }
+},
+{
+    "model": "shop.item",
+    "pk": 7,
+    "fields": {
+        "title": "iPhone 13 Pro Max",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type a",
+        "category": 2,
+        "price": 1199,
+        "image": "iphone13promax_5qriHam.png"
+    }
+},
+{
+    "model": "shop.item",
+    "pk": 8,
+    "fields": {
+        "title": "MagSafe",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type a",
+        "category": 4,
+        "price": 59,
+        "image": "magsafe.png"
+    }
+},
+{
+    "model": "shop.item",
+    "pk": 9,
+    "fields": {
+        "title": "Pro Display XDR",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type a",
+        "category": 5,
+        "price": 4999,
+        "image": "PngItem_6472251_m4rTgam.png"
+    }
+},
+{
+    "model": "shop.item",
+    "pk": 10,
+    "fields": {
+        "title": "Studio Display",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type a",
+        "category": 5,
+        "price": 1999,
+        "image": "studio_display.png"
+    }
+},
+{
+    "model": "shop.item",
+    "pk": 11,
+    "fields": {
+        "title": "Adapter 20w",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type a",
+        "category": 4,
+        "price": 39,
+        "image": "20w.png"
+    }
+},
+{
+    "model": "shop.order",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "list": "{\"2\": {\"title\": \"iPhone 13\", \"amount\": 2, \"price\": 1598, \"img\": \"iphone13_deruPyQ.png\"}}",
+        "date": "2022-05-03T21:46:47.351"
+    }
+},
+{
+    "model": "shop.order",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "list": "{\"2\": {\"title\": \"iPhone 13\", \"amount\": 1, \"price\": 799, \"img\": \"iphone13_deruPyQ.png\"}, \"8\": {\"title\": \"MagSafe\", \"amount\": 1, \"price\": 59, \"img\": \"magsafe.png\"}}",
+        "date": "2022-05-09T00:16:32.382"
+    }
+},
+{
+    "model": "shop.order",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "list": "{\"8\": {\"title\": \"MagSafe\", \"amount\": 1, \"price\": 59, \"img\": \"magsafe.png\"}}",
+        "date": "2022-05-19T18:33:53.453"
+    }
+},
+{
+    "model": "shop.order",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "list": "{\"7\": {\"title\": \"iPhone 13 Pro Max\", \"amount\": 1, \"price\": 1199, \"img\": \"iphone13promax_5qriHam.png\"}}",
+        "date": "2022-05-19T18:37:08.883"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2022-04-23T17:21:10.570",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "test",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2022-04-23T17:21:12.179",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "test",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2022-04-23T17:21:50.829",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Phones",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2022-04-23T17:21:54.800",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "N",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2022-04-23T17:21:58.429",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "N",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2022-04-23T17:22:03.209",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Notebooks",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2022-04-23T17:22:17.636",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "profile"
+        ],
+        "object_id": "1",
+        "object_repr": "test",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2022-04-23T17:23:38.207",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "item"
+        ],
+        "object_id": "1",
+        "object_repr": "iPhone 13",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2022-04-26T16:03:40.323",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Phones",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2022-04-26T16:03:45.190",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Notebooks",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2022-04-26T16:06:21.768",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Ноутбуки",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2022-04-26T18:03:14.916",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Ноутбуки",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2022-04-26T18:08:33.592",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Ноутбуки",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2022-04-26T18:53:28.022",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "Телефоны",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2022-04-26T18:53:59.186",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "item"
+        ],
+        "object_id": "2",
+        "object_repr": "iPhone 13",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2022-04-26T18:55:44.399",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "item"
+        ],
+        "object_id": "3",
+        "object_repr": "MacBook Pro 16' (2021)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2022-04-28T17:24:14.301",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Наушники",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2022-04-28T17:25:51.819",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "item"
+        ],
+        "object_id": "4",
+        "object_repr": "AirPods Pro",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2022-04-28T17:29:20.558",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "item"
+        ],
+        "object_id": "5",
+        "object_repr": "AirPods (3 Gen)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2022-04-28T17:29:50.474",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "item"
+        ],
+        "object_id": "6",
+        "object_repr": "MacBook Pro 16\" (2019)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2022-04-28T17:30:18.060",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "item"
+        ],
+        "object_id": "7",
+        "object_repr": "iPhone 13 Pro Max",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2022-04-30T16:25:36.002",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Аксессуары",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2022-04-30T16:27:40.374",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "item"
+        ],
+        "object_id": "8",
+        "object_repr": "MagSafe",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2022-04-30T16:29:12.369",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "5",
+        "object_repr": "Мониторы",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2022-04-30T16:29:40.910",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "item"
+        ],
+        "object_id": "9",
+        "object_repr": "Pro Display XDR",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2022-04-30T16:30:01.375",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "item"
+        ],
+        "object_id": "10",
+        "object_repr": "Studio Display",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2022-04-30T16:30:48.787",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "item"
+        ],
+        "object_id": "11",
+        "object_repr": "Adapter 20w",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2022-05-01T09:00:22.839",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "profile"
+        ],
+        "object_id": "2",
+        "object_repr": "admin",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2022-05-01T19:19:20.316",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "profile"
+        ],
+        "object_id": "3",
+        "object_repr": "",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2022-05-03T16:42:31.954",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "order"
+        ],
+        "object_id": "1",
+        "object_repr": "Order object (1)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2022-05-03T16:44:54.373",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "order"
+        ],
+        "object_id": "2",
+        "object_repr": "Order object (2)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2022-05-03T21:46:33.137",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "order"
+        ],
+        "object_id": "3",
+        "object_repr": "Order object (3)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}
+]
